@@ -35,7 +35,8 @@ def signin_with_invalid_credentials():
             By.XPATH, "//h3[normalize-space()='Invalid Username']").text
 
         assert expected_message_text == actual_message_text, f"FAILED: {expected_message_text} doesn't match {actual_message_text}"
-        print("TC_020 PASSED: Sucessfull SignIn with Invalid Username and Invalid Password")
+        print(
+            "TC_020 PASSED: Unsucessfull SignIn with Invalid Username and Invalid Password")
 
     except Exception as e:
         print({e})
@@ -74,7 +75,7 @@ def signin_with_valid_username_invalid_password():
             By.XPATH, "//h3[normalize-space()='Invalid Password']").text
 
         assert expected_message_text == actual_message_text, f"FAILED: {expected_message_text} doesn't match {actual_message_text}"
-        print("TC_022 PASSED: Sucessfull SignIn with Valid Username and Invalid Password")
+        print("TC_022 PASSED: Unsucessfull SignIn with Valid Username and Invalid Password")
 
         driver.quit()
     except Exception as e:
@@ -118,7 +119,7 @@ def signin_with_invalid_username_valid_password():
             By.XPATH, "//h3[normalize-space()='Invalid Username']").text
 
         assert expected_message_text == actual_message_text, f"FAILED: {expected_message_text} doesn't match {actual_message_text}"
-        print("TC_021 PASSED: Sucessfull SignIn with InValid Username and valid Password")
+        print("TC_021 PASSED: Unucessfull SignIn with InValid Username and valid Password")
 
         driver.quit()
     except Exception as e:
